@@ -1,22 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Pixelify_Sans} from 'next/font/google'
-
-const pixelify = Pixelify_Sans({
-    subsets: ['latin'],
-    variable: '--font-pixelify',
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import {geistSans, geistMono, pixelify, chicle} from "@/app/components/ui/font/font";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pixelify.className} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${chicle.variable} ${pixelify.className} antialiased`}>
         {children}
       </body>
     </html>
