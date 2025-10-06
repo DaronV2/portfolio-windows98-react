@@ -14,7 +14,11 @@ module.exports = {
       },
       colors: {
         button: "rgb(172,172,172)",
+        grey: "rgb(192,192,192)",
       },
+      backgroundImage: {
+        'win98': "url('/wallpaper_win98.png')",
+      }
     },
   },
   plugins: [],
