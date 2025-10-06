@@ -43,7 +43,7 @@ export default function Win98Desktop({ onOpenPortfolio }: Win98DesktopProps){
                   <CustomImage src='/icon_pokedex.png' alt=" icon pokedex"/>
                   <p className=' pt-8 flex justify-center text-black  font-light'> Site Pokédex</p>
                 </div>
-                <div onDoubleClick={redirectToPokedex} id='app_desktop_portfolio' className='app_desktop p-2 h-20 w-20 hover:bg-blue-200 hover:border hover:border-blue-600 hover:border-dotted m-2 grid grid-rows-[10%_70%_20%] items-center justify-center'>
+                <div onDoubleClick={redirectToGithub} id='app_desktop_portfolio' className='app_desktop p-2 h-20 w-20 hover:bg-blue-200 hover:border hover:border-blue-600 hover:border-dotted m-2 grid grid-rows-[10%_70%_20%] items-center justify-center'>
                   <div></div>
                   <CustomImage src='/icon_github.png' alt=" icon github"/>
                   <p className=' pt-8 flex justify-center text-black  font-light'>Github</p>
