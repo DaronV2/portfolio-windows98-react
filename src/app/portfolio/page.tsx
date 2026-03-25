@@ -77,17 +77,25 @@ export default function Portfolio() {
             </div>
             <div className=" w-[70%]">
               <Tab title="Présentation">
-                <div className="grid grid-cols-2">
+                {/* <div className="grid grid-cols-2"> */}
                     <div className=" flex justify-start flex-col px-4 m-1">
                       <p className=" text-7xl text-left ">NIÉ</p>
-                      <p className=" text-7xl text-left font-chicle ">LOUIS</p>
-                      <p className="underline text-left">étudiant en développement informatique</p>
+                      <div className="font-chicle flex">
+                        <div className=" text-7xl text-left">
+                          <p>LOUIS</p>
+                        </div>
+                        <div className=" w-3.5"></div>
+                        <div className=" flex text-3xl items-end">
+                          <p>20 ans</p>
+                        </div>
+                      </div>
+                      <p className="underline text-left">Étudiant en informatique à la recherche d’une alternance pour la rentrée 2026</p>
                     </div>
-                  </div>
+                  {/* </div> */}
               </Tab>
               <Tab title="Profil">
                 <div className=" flex justify-center items-center mt-2 mb-2">
-                  <p>Jeune diplômé en BTS SIO (Services Informatiques aux Organisations), je suis actuellement à la recherche d’une alternance dans le domaine du développement d’applications.</p>
+                  <p>Jeune diplômé en BTS SIO (Services Informatiques aux Organisations), je suis actuellement à la recherche d’un contrat en alternance pour un Bachelor CDA (Concepteur Développeur d’Applications)</p>
                 </div> 
               </Tab>
               <Tab title="Compétences">
@@ -120,11 +128,14 @@ export default function Portfolio() {
               </Tab>
               <Tab title="Expériences Professionelles">
                 <div className=" m-1">
-                    <ProfessionalExperience logo="/Ciuch_logo.png" title="Stage BTS SIO 1ère année (2024, 6 semaines)" entrepriseName="CIUCH Ingini" description="Génération et enrichissement de données techniques via un programme en C# en prenant en entrée des données brutes du bureau d’études afin de produire des données structurées exploitables"/>
+                    <ProfessionalExperience logo="/Delquignies_logo.jpg" title="Manutentionnaire (début 2026 - Actuellement)" entrepriseName="Delquignies Logistique" />
+                    <hr className=" h-0.5 bg-white"/>
+                    <ProfessionalExperience logo="/Logo_Sdez.jpg" title="Job d’été (Juillet 2025)" entrepriseName="SDEZ Valenciennes" description="Agent de production" />
                     <hr className=" h-0.5 bg-white"/>
                     <ProfessionalExperience logo="/Lyreco_logo.png" title="Stage de BTS SIO 2ème année(2024, 5 semaines)" entrepriseName="LYRECO France" description="Développement d’un logiciel de gestion des taches et maintenances en PHP, Typescript."/>
                     <hr className=" h-0.5 bg-white"/>
-                    <ProfessionalExperience logo="/Logo_Sdez.jpg" title="Job d’été (Juillet 2025)" entrepriseName="SDEZ Valenciennes" description="Agent de production" />
+                    <ProfessionalExperience logo="/Ciuch_logo.png" title="Stage BTS SIO 1ère année (2024, 6 semaines)" entrepriseName="CIUCH Ingini" description="Génération et enrichissement de données techniques via un programme en C# en prenant en entrée des données brutes du bureau d’études afin de produire des données structurées exploitables"/>
+                  
                   </div>
               </Tab>
               <Tab title="Certifications">
