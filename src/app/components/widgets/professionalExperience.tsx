@@ -2,7 +2,7 @@ import CustomImage from "./customImage";
 type customPropsProExp = {
     title: string
     entrepriseName: string
-    description: string
+    description?: string
     logo: string
 }
 
