@@ -3,15 +3,13 @@ import { Rnd } from "react-rnd";
 import CustomImage from "./components/widgets/customImage";
 import Button from "./components/widgets/button";
 import Tab from "./components/widgets/tab";
+import BottomBar from "./components/widgets/bottom_bar";
 
 type Win98DesktopProps = {
   onOpenPortfolio: () => void; // le type de la prop (une fonction)
 };
 
 export default function Win98Desktop({ onOpenPortfolio }: Win98DesktopProps){
-    const date = new Date();
-    const hour = date.getHours();
-    const min = date.getMinutes();
     const closeConnexionTab = () => {
         const tab = document.getElementById('tab-Connexion');
         if(tab) tab.hidden = true;
@@ -71,18 +69,7 @@ export default function Win98Desktop({ onOpenPortfolio }: Win98DesktopProps){
                    </div>
                 </Tab>
               </Rnd>
-              <div className="h-9 w-full bg-(--grey) z-10 border-t-2 border-white grid grid-cols-[10%_80%_10%]">
-                <Button className=' m-0.5 flex justify-start ' handleTheClick>
-                  <CustomImage src='/win98_logo.svg' alt=" windows 98 pc" className=' max-h-7 p-0.5 mr-1 ml-1'/>
-                  <p className=' text-black text-3xl my-0.5 flex items-center'>Start</p>
-                </Button>
-                <div></div>
-                <div>
-                  <Button className='m-0.5 max-h-7 h-full'>
-                    <p className=' text-xl font-extralight'>{hour < 10 ? `0${hour}`: `${hour}`}:{min}</p>
-                  </Button>
-                </div>
-              </div>
+              <BottomBar/>
             </div> 
           </div>
         </div>
