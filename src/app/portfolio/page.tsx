@@ -5,6 +5,7 @@ import Link from 'next/link'
 import CustomImage from "../components/widgets/customImage";
 import { useRouter } from "next/navigation";
 import BottomBar from "../components/widgets/bottom_bar";
+import { useEffect } from "react";
 
 export default function Portfolio() {
     const router = useRouter();
@@ -27,7 +28,11 @@ export default function Portfolio() {
         router.push("");
       }
     }
-    return <div className=" duration-200 scale-in-bottom ">
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+    return <div>
+      <div className=" duration-200 scale-in-bottom ">
         <Tab title="Portfolio NIÉ Louis" onCloseButton={close}>
               <div className=" flex flex-row font-pixelify ">
               <div className=" w-[30%] flex flex-col">
@@ -150,7 +155,7 @@ export default function Portfolio() {
               </div>
             </div>
           </Tab>
-          <br />
-          <BottomBar openedTab="e"/>
         </div>
+        <BottomBar openedTab="e"/>
+      </div>
 }
