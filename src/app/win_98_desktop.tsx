@@ -27,7 +27,12 @@ export default function Win98Desktop({ onOpenPortfolio }: Win98DesktopProps){
             <CustomImage
               src="/wallpaper_win98.png"
               alt="background image"
-              className="absolute top-0 left-0 w-full h-full object-cover "
+              className="absolute top-0 left-0 w-full h-full object-cover hidden md:block"
+            />
+            <CustomImage
+              src="/wallpaper_win98_phone.jpg"
+              alt="background image"
+              className="absolute top-0 left-0 w-full h-full object-cover block md:hidden"
             />
             <div className='z-10 w-full h-full flex flex-col justify-between'>
               <div className="flex flex-row gap-0.5">
