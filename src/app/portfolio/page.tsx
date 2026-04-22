@@ -34,7 +34,7 @@ export default function Portfolio() {
     return <div>
       <div className=" duration-200 scale-in-bottom ">
         <Tab title="Portfolio NIÉ Louis" onCloseButton={close}>
-              <div className=" flex flex-row font-pixelify ">
+              <div className=" flex flex-row font-pixelify">
               <div className=" w-[30%] flex flex-col">
                 <Tab title="Contact">
                   <div className="w-full inline-block m-1 text-xl h-auto">
@@ -47,6 +47,10 @@ export default function Portfolio() {
                         06.75.64.94.52
                       </a>
                     </div> */}
+                    <div className="flex w-full justify-center items-center gap-x-2 mb-2">
+                      <CustomImage src="/icon_location.png" alt=" Licence icon" className="h-6" />
+                      <p> Nord (59)</p>
+                    </div>
                     <Link href="mailto:louisnie91@gmail.com" className="flex w-full justify-center items-center gap-x-2 mb-2">
                       <CustomImage src="/mail_icon.png" alt="mail icon" className="w-6 h-6 "/>
                       <p>louisnie91@gmail.com</p>
@@ -82,7 +86,7 @@ export default function Portfolio() {
                   </div> 
                 </Tab>
               </div>
-              <div className=" w-[70%]">
+              <div className=" w-[70%] ">
                 <Tab title="Présentation">
                   {/* <div className="grid grid-cols-2"> */}
                       <div className=" flex justify-start flex-col px-4 m-1">
@@ -102,7 +106,10 @@ export default function Portfolio() {
                 </Tab>
                 <Tab title="Profil">
                   <div className=" flex justify-center items-center mt-2 mb-2">
-                    <p>Jeune diplômé en BTS SIO (Services Informatiques aux Organisations), je suis actuellement à la recherche d’un contrat en alternance pour un Bachelor CDA (Concepteur Développeur d’Applications)</p>
+                    <p>Jeune diplômé en BTS SIO (Services Informatiques aux
+                      Organisations), je suis actuellement à la recherche d’un
+                      contrat en alternance pour un Bachelor CDA (Concepteur
+                      Développeur d’Applications), pour l’année 2026 - 2027</p>
                   </div> 
                 </Tab>
                 <Tab title="Compétences">
@@ -155,6 +162,7 @@ export default function Portfolio() {
               </div>
             </div>
           </Tab>
+          <br />
         </div>
         <BottomBar openedTab="e"/>
       </div>
