@@ -34,9 +34,9 @@ export default function Portfolio() {
     return <div>
       <div className=" duration-200 scale-in-bottom ">
         <Tab title="Portfolio NIÉ Louis" onCloseButton={close}>
-              <div className=" flex flex-row font-pixelify">
-              <div className=" w-[30%] flex flex-col">
-                <Tab title="Contact">
+              <div className=" md:flex flex-row font-pixelify">
+              <div className=" md:w-[30%] md:flex md:flex-col flex flex-col" >
+                <Tab title="Contact" style="">
                   <div className="w-full inline-block m-1 text-xl h-auto">
                     <div className="w-full flex justify-center mb-4">
                       <CustomImage src="/profile_pic.jpg" alt="Photo de profil" className="w-50 h-50 object-cover shadow-(--custom-inset) border-2 border-[#929292] "/>
@@ -65,7 +65,7 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </Tab>
-                <Tab title="Qualités">
+                <Tab title="Qualités" style=" hidden md:block">
                   <div className=" w-full p-1 justify-start flex flex-col text-2xl h-auto"> 
                     <p> - Persévérant</p>
                     <p> - Créatif</p>
@@ -73,20 +73,20 @@ export default function Portfolio() {
                     <p> - Curieux</p>
                   </div> 
                 </Tab>
-                <Tab title="Langues">
+                <Tab title="Langues" style=" hidden md:block">
                   <div className=" w-full p-1 justify-start flex flex-col text-2xl h-auto"> 
                     <p> - Français</p>
                     <p> - Anglais (niveau B2)</p>
                   </div> 
                 </Tab>
-                <Tab title="Hobbies">
+                <Tab title="Hobbies" style=" hidden md:block">
                   <div className=" w-full p-1 justify-start flex flex-col text-2xl h-auto"> 
                     <p> - Jeux vidéos</p>
                     <p> - Aquariophilie</p>
                   </div> 
                 </Tab>
               </div>
-              <div className=" w-[70%] ">
+              <div className=" md:w-[70%] ">
                 <Tab title="Présentation">
                   {/* <div className="grid grid-cols-2"> */}
                       <div className=" flex justify-start flex-col px-4 m-1">
@@ -117,7 +117,7 @@ export default function Portfolio() {
                       <div>
                         {Array.from(map.entries()).map(([key, value]) => ( 
                           <div key={key} >
-                            <p className="flex items-center justify-center"> 
+                            <p className="flex items-center justify-start"> 
                               - <CustomImage src={key} alt=" Linkedin icon" className="w-6 h-6  mx-1"/> {value} 
                             </p>
                           </div>
@@ -126,7 +126,7 @@ export default function Portfolio() {
                       <div>
                         {Array.from(map2.entries()).map(([key, value]) => ( 
                           <div key={key} >
-                            <p className="flex items-center justify-center"> 
+                            <p className="flex items-center justify-start"> 
                               - <CustomImage src={key} alt=" Linkedin icon" className="w-6 h-6 mx-1"/> {value} 
                             </p>
                           </div>
@@ -151,6 +151,26 @@ export default function Portfolio() {
                       <ProfessionalExperience logo="/Ciuch_logo.png" title="Stage BTS SIO 1ère année (2024, 6 semaines)" entrepriseName="CIUCH Ingini" description="Génération et enrichissement de données techniques via un programme en C# en prenant en entrée des données brutes du bureau d’études afin de produire des données structurées exploitables"/>
                     
                     </div>
+                </Tab>
+                <Tab title="Qualités" style=" md:hidden block">
+                  <div className=" w-full p-1 justify-start flex flex-col text-2xl h-auto"> 
+                    <p> - Persévérant</p>
+                    <p> - Créatif</p>
+                    <p> - Ordonné</p>
+                    <p> - Curieux</p>
+                  </div> 
+                </Tab>
+                <Tab title="Langues" style=" md:hidden block">
+                  <div className=" w-full p-1 justify-start flex flex-col text-2xl h-auto"> 
+                    <p> - Français</p>
+                    <p> - Anglais (niveau B2)</p>
+                  </div> 
+                </Tab>
+                <Tab title="Hobbies" style=" md:hidden block">
+                  <div className=" w-full p-1 justify-start flex flex-col text-2xl h-auto"> 
+                    <p> - Jeux vidéos</p>
+                    <p> - Aquariophilie</p>
+                  </div> 
                 </Tab>
                 <Tab title="Certifications">
                   <div className="flex flex-col">
