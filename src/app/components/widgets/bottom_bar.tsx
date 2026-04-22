@@ -18,7 +18,7 @@ export default function BottomBar({openedTab} : BottomBarProps){
         router.push('/portfolio')
     }
     return (
-        <div className="h-9 w-full bg-(--grey) z-10 border-t-2 border-white grid grid-cols-[10%_80%_10%] fixed bottom-0 left-0">
+        <div className="h-9 w-full bg-(--grey) z-10 border-t-2 border-white grid md:grid-cols-[10%_80%_10%] grid-cols-[20%_70%_10%] fixed bottom-0 left-0">
             <Button className=' m-0.5 flex justify-start ' handleTheClick>
               <CustomImage src='/win98_logo.svg' alt=" windows 98 pc" className=' max-h-7 p-0.5 mr-1 ml-1'/>
               <p className=' text-black text-3xl my-0.5 flex items-center'>Start</p>
@@ -45,7 +45,7 @@ export default function BottomBar({openedTab} : BottomBarProps){
             </div>
             <div>
                 <Button className='m-0.5 max-h-7 h-full'>
-                    <p className=' text-xl font-extralight'>{hour < 10 ? `0${hour}`: `${hour}`}:{min}</p>
+                    <p className=' text-xl font-extralight'>{hour < 10 ? `0${hour}`: `${hour}`}:{min < 10 ? `0${min}`: `${min}`}</p>
                 </Button>
             </div>
         </div>
