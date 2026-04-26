@@ -18,8 +18,8 @@ export default function BottomBar({openedTab} : BottomBarProps){
         router.push('/portfolio')
     }
     return (
-        <div className="h-9 w-full bg-(--grey) z-10 border-t-2 border-white grid md:grid-cols-[10%_80%_10%] grid-cols-[20%_70%_10%] fixed bottom-0 left-0">
-            <Button className=' m-0.5 flex justify-start ' handleTheClick>
+        <div className="h-9 w-full bg-(--grey) z-10 border-t-2 border-white grid md:grid-cols-[10%_80%_10%] grid-cols-[30%_60%_10%] fixed bottom-0 left-0">
+            <Button className=' m-0.5 flex justify-start w-auto' handleTheClick>
               <CustomImage src='/win98_logo.svg' alt=" windows 98 pc" className=' max-h-7 p-0.5 mr-1 ml-1'/>
               <p className=' text-black text-3xl my-0.5 flex items-center'>Start</p>
             </Button>
